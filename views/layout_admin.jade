@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+	body
+		nav.navbar.navbar-default
+			div.container-fluid
+				div.navbar-header
+					button(class='navbar-toggle collapsed', type='button', data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+						span.sr-only
+							Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a(href='/home', class='navbar-brand') Slimmeneefjes
+				div.collapse.navbar-collapse#bs-example-navbar-collapse-1
+					ul.nav.navbar-nav
+						li.dropdown
+							a(href='#', class='dropdown-toggle',  data-toggle="dropdown", role="button", aria-expanded="false") Users
+								span.caret
+							ul(class='dropdown-menu', role="menu")
+								li
+									a(href='/userlist') List users
+								li.divider
+								li
+									a(href='#') Add user
+						li
+							a(href='/signout') Sign Out
+		block content
+		script(type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+		script(type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
